@@ -1,0 +1,12 @@
+# Claude Instructions
+
+This repository contains Claude AI instructions and configuration.
+
+## Purpose
+This file provides guidance and context for Claude Code when working in this repository.
+
+## Guidelines
+- Follow best practices for code quality and maintainability
+- Write clear, descriptive commit messages
+- Test changes before committing
+- Keep the repository organized and well-documented
