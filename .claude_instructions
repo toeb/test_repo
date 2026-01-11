@@ -39,6 +39,30 @@ This repository contains projects using multiple technology stacks:
 - All C# projects use SDK-style project files
 - Centralized package management via Directory.Build.props (if needed)
 
+### Build & CI Approach
+
+#### Local-First Philosophy
+- **All CI operations must be runnable locally** using the same scripts
+- CI workflows call PowerShell scripts from `src/Infrastructure/`
+- No "CI magic" - everything is transparent and reproducible locally
+- Enables easy debugging of CI failures
+
+#### Infrastructure Scripts
+Located in `src/Infrastructure/`, all scripts use **PowerShell 7 (pwsh)** for cross-platform compatibility:
+- `ci.ps1` - Complete CI pipeline (restore, build, test)
+- `restore.ps1` - Restore NuGet packages
+- `build.ps1` - Build all projects
+- `test.ps1` - Run all tests
+- `clean.ps1` - Clean build artifacts
+
+#### CI Configuration
+- **Platform**: GitHub Actions
+- **Triggers**: Pull requests
+- **Runners**:
+  - Windows (builds all frameworks: net8.0 + net48)
+  - Linux (builds net8.0 only)
+- **Workflow**: `.github/workflows/pr-build.yml` calls Infrastructure scripts
+
 ## Guidelines
 - Follow best practices for code quality and maintainability
 - Write clear, descriptive commit messages

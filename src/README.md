@@ -9,6 +9,7 @@ All projects live as direct subdirectories in a flat structure:
 - `Tsp.Core/` - Core library (multi-targets net8.0 and net48)
 - `Tsp.Core.Tests/` - Unit tests for Tsp.Core using xUnit
 - `Tsp.Cli/` - Command-line application
+- `Infrastructure/` - Build automation scripts (PowerShell 7)
 
 ## Solution
 
@@ -16,15 +17,28 @@ The solution file `Tsp.slnx` uses the new XML-based solution format.
 
 ## Building
 
-From the `src/` directory:
+### Recommended: Use Infrastructure Scripts
+
+For the best experience, use the PowerShell build scripts in `Infrastructure/`:
+
+```powershell
+# Run full CI pipeline (restore, build, test)
+./Infrastructure/ci.ps1
+
+# Or individual steps
+./Infrastructure/restore.ps1
+./Infrastructure/build.ps1
+./Infrastructure/test.ps1
+```
+
+See [Infrastructure/README.md](Infrastructure/README.md) for detailed documentation.
+
+### Alternative: Direct .NET Commands
+
+You can also use standard .NET CLI commands:
 
 ```bash
 dotnet build Tsp.slnx
-```
-
-## Running Tests
-
-```bash
 dotnet test Tsp.slnx
 ```
 
