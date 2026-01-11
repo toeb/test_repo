@@ -63,6 +63,39 @@ Located in `src/Infrastructure/`, all scripts use **PowerShell 7 (pwsh)** for cr
   - Linux (builds net8.0 only)
 - **Workflow**: `.github/workflows/pr-build.yml` calls Infrastructure scripts
 
+## Git Workflow & Branching Strategy
+
+### Branching Strategy
+- **Main Branch**: Protected, requires PR approval and passing CI
+- **Feature Branches**: Short-lived, single-purpose branches
+  - Branch naming: Use descriptive names (e.g., `feature/add-logging`, `fix/null-reference`)
+  - Keep branches focused and small
+  - Delete after merge
+
+### Pull Request Requirements
+- **Every PR must have an associated GitHub Issue**
+- Link the issue in the PR description (e.g., "Closes #123")
+- PR must pass all CI checks before merging
+- Main branch protection is enforced
+
+### Branch Protection Rules
+- Direct commits to `main` are not allowed
+- All changes must go through PR process
+- CI must pass before merge
+- Code review may be required (repository settings dependent)
+
+## Documentation Requirements
+
+### Architecture Decision Records (ADRs)
+- All major architectural decisions must be documented in `docs/adr/`
+- Use the ADR template format (see `docs/adr/0000-template.md`)
+- ADRs are immutable once accepted - create new ADRs to supersede old ones
+
+### Keeping Instructions Updated
+- When making general rules or conventions, update `.claude_instructions`
+- When making architectural decisions, create an ADR in `docs/adr/`
+- Keep all documentation synchronized with actual implementation
+
 ## Guidelines
 - Follow best practices for code quality and maintainability
 - Write clear, descriptive commit messages

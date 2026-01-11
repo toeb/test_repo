@@ -89,5 +89,17 @@ The CI workflow calls the same PowerShell scripts you use locally, ensuring cons
 
 ## Documentation
 
-- [Infrastructure Scripts](../src/Infrastructure/README.md) - Detailed build script documentation
-- Additional documentation will be added as the project grows.
+### Process & Workflow
+- [Branching Strategy](BRANCHING.md) - Git workflow, branch protection, and PR requirements
+- [Architecture Decision Records (ADRs)](adr/README.md) - Major architectural decisions
+
+### Technical Documentation
+- [Infrastructure Scripts](../src/Infrastructure/README.md) - Build automation and CI/CD scripts
+- [Source Code Structure](../src/README.md) - Source code organization
+
+### ADRs (Key Decisions)
+- [ADR-0001: Local-First CI Approach](adr/0001-local-first-ci-approach.md)
+- [ADR-0002: Multi-Targeting .NET Frameworks](adr/0002-multi-targeting-dotnet.md)
+- [ADR-0003: Flat Source Directory Structure](adr/0003-flat-source-structure.md)
+- [ADR-0004: PowerShell 7 for Build Automation](adr/0004-powershell-build-scripts.md)
+- [ADR-0005: XML-Based Solution Format (.slnx)](adr/0005-slnx-solution-format.md)
