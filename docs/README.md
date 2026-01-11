@@ -1,5 +1,7 @@
 # Toeb Software Platform (TSP) Documentation
 
+[![PR Build](https://github.com/toeb/test_repo/actions/workflows/pr-build.yml/badge.svg)](https://github.com/toeb/test_repo/actions/workflows/pr-build.yml)
+
 ## Overview
 This is a tech demo and playground repository showcasing multiple technology stacks.
 

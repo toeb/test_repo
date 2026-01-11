@@ -1,5 +1,7 @@
 # TSP Source Code
 
+[![PR Build](https://github.com/toeb/test_repo/actions/workflows/pr-build.yml/badge.svg)](https://github.com/toeb/test_repo/actions/workflows/pr-build.yml)
+
 This directory contains all source code projects for the Toeb Software Platform.
 
 ## Structure
