@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="Tsp.Core\Tsp.Core.csproj" />
+    <Project Path="Tsp.Core.Tests\Tsp.Core.Tests.csproj" />
+    <Project Path="Tsp.Cli\Tsp.Cli.csproj" />
+  </Folder>
+</Solution>

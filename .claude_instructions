@@ -1,12 +1,47 @@
 # Claude Instructions
 
-This repository contains Claude AI instructions and configuration.
+This repository is a tech demo and playground for Toeb Software Platform (TSP).
 
 ## Purpose
 This file provides guidance and context for Claude Code when working in this repository.
+
+## Repository Structure
+
+### Folder Organization
+- `docs/` - Documentation, architecture diagrams, and guides
+- `src/` - Source code for all projects (flat structure)
+  - All projects (DLLs, EXEs, modules) live as direct subdirectories of `src/`
+  - Dotfiles (.editorconfig, .gitignore, etc.) are directly in `src/` and must stay compatible across all projects
+
+### Tech Stacks
+This repository contains projects using multiple technology stacks:
+- **C# (Desktop & Web)**: .NET projects multi-targeting .NET 8.0 and .NET Framework 4.8
+- **C++**: Build system TBD
+- **Python**: Project structure TBD
+
+### .NET Projects
+
+#### Naming Conventions
+- Use C# typical naming conventions (PascalCase)
+- Root namespace: `Tsp` (Toeb Software Platform)
+- Examples:
+  - `Tsp.Core` - Core library
+  - `Tsp.Core.Tests` - Test project for Core
+  - `Tsp.Cli` - Command-line application
+
+#### Project Configuration
+- **Target Frameworks**: Multi-target `net8.0` and `net48`
+- **Solution Format**: Use `.slnx` (new XML-based solution format)
+- **Testing Framework**: xUnit
+- **Project Style**: Minimal scaffolding
+
+#### Build & Dependencies
+- All C# projects use SDK-style project files
+- Centralized package management via Directory.Build.props (if needed)
 
 ## Guidelines
 - Follow best practices for code quality and maintainability
 - Write clear, descriptive commit messages
 - Test changes before committing
 - Keep the repository organized and well-documented
+- Maintain compatibility of dotfiles across all projects in src/
